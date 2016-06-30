@@ -20,6 +20,9 @@
     "rules": {
         "semi": ["error", "always"],
         "quotes": ["error", "double"],
-        "comma-dangle": ["error", "always-multiline"]
+        "comma-dangle": ["error", "always-multiline"],
+        "react/jsx-indent-props": ["error", 2],
+        "react/jsx-first-prop-new-line": ["error", "multiline"],
+        "react/jsx-max-props-per-line": ["error"]
     }
 }

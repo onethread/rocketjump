@@ -1,8 +1,9 @@
 import React from "react";
+import Calendar from "./Calendar";
 
 const App = () => (
   <div>
-    {"Hello"}
+    <Calendar currentMonth={6} />
   </div>
 );
 

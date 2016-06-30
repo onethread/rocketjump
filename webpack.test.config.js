@@ -1,5 +1,5 @@
-var path = require("path");
-var webpack = require("webpack");
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   devtool: "cheap-module-eval-source-map",
@@ -9,12 +9,16 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "test.bundle.js",
-    publicPath: "http://localhost:7357/dist/test.bundle",
+    publicPath: "http://localhost:7357/dist/",
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
+  resolve: {
+    extensions: ["", ".js", ".jsx"],
+    modulesDirectories: ["node_modules"],
+  },
   module: {
     loaders: [
       {
