@@ -5,7 +5,7 @@ import { expect } from "chai";
 import Date from "./Date.jsx";
 
 describe("<Date />", () => {
-  it("renders a div", () => {
+  it("renders a span", () => {
     const wrapper = shallow(<Date />);
     expect(wrapper.find("span")).to.have.length(1);
   });
@@ -23,5 +23,15 @@ describe("<Date />", () => {
       />
     );
     expect(wrapper.text()).to.contain("1993");
+  });
+
+  it("renders iso date 2016-07-01T10:30:00.000Z as 06:30 EST", () => {
+    const wrapper = shallow(
+      <Date
+        value={"2016-07-01T10:30:00.000Z"}
+        format={"HH:mm"}
+      />
+    );
+    expect(wrapper.text()).to.eql("06:30");
   });
 });

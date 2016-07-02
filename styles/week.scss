@@ -1,0 +1,45 @@
+$padding-top: 45px;
+
+.week {
+  .column {
+    width: 14%;
+    float: left;
+  }
+
+  .week-wrapper {
+    float: left;
+    width: 90%;
+  }
+
+  .week-gutter {
+    width: 70px;
+    float: left;
+    padding-top: $padding-top;
+  }
+
+  .day {
+    .cell {
+      .date {
+        color: hsla(0, 0, 0, 0.8);
+        display:none;
+      }
+
+      &:hover {
+        .date {
+          display:inline;
+        }
+      }
+    }
+
+    &:hover {
+      background: {
+        color: hsl(0, 0%, 98%);
+      }
+    }
+    // &:nth-child(odd) {
+    //   background: {
+    //     color: hsl(0, 0%, 98%);
+    //   }
+    // }
+  }
+}

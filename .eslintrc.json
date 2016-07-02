@@ -6,7 +6,10 @@
             "jsx": true
         }
     },
-    "extends": "airbnb",
+    "extends": [
+        "eslint:recommended",
+        "airbnb"
+    ],
     "plugins": [
         "react"
     ],

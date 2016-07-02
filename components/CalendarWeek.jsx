@@ -3,6 +3,10 @@ import moment from "moment";
 import { Row } from "react-bootstrap";
 import CalendarCell from "./CalendarCell.jsx";
 
+const propTypes = {
+  weekNumber: PropTypes.number.isRequired,
+};
+
 class CalendarWeek extends Component {
   renderDaysOfWeek(weekNumber) {
     const week = moment().week(weekNumber);
@@ -23,8 +27,6 @@ class CalendarWeek extends Component {
   }
 }
 
-CalendarWeek.propTypes = {
-  weekNumber: PropTypes.number.isRequired,
-};
+CalendarWeek.propTypes = propTypes;
 
 export default CalendarWeek;
