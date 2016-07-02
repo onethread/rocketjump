@@ -27,7 +27,7 @@ const createEvents = events => {
     if (eventsList.length > index + 1) {
       const nextEvent = eventsList[index + 1];
 
-      if (moment(nextEvent.startDate).isBetween(event.startDate, event.endDate, null, "()")) {
+      if (moment(nextEvent.startDate).isBetween(event.startDate, event.endDate, null, "[]")) {
         count++;
         total++;
         followingEvent = followingEvent.concat(createEvent(eventsList, index + 1));

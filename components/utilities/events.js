@@ -13,9 +13,13 @@ export const eventSeed = [{
   startDate: "2016-07-01T10:00:00.000Z",
   endDate: "2016-07-01T12:00:00.000Z",
 }, {
-  name: "Oaa for dentist",
-  startDate: "2016-06-21T10:30:00.000Z",
-  endDate: "2016-06-21T12:00:00.000Z",
+  name: "conflicting appointment",
+  startDate: "2016-07-01T10:00:00.000Z",
+  endDate: "2016-07-01T12:00:00.000Z",
+}, {
+  name: "early coffee",
+  startDate: "2016-06-27T09:30:00.000Z",
+  endDate: "2016-06-27T14:00:00.000Z",
 }];
 
 export const sortEvents = (a, b) => {
